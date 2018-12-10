@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+    "name": "Github Expander",
+    "description": "Opens the collapsed activity (created repositories or starred repositories) for people you follow",
+    "version": "0.1",
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+    "icons": { 
+        "128":"icon.png"
+    }, 
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "css/style.css"
+            ],            
+            "run_at": "document_idle"
+        }
+    ]
+}
